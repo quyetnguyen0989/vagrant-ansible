@@ -33,6 +33,7 @@ defaults
     # enable stats uri
     stats enable
     stats uri /haproxy?stats
+    stats auth admin:admin
 
 backend app
     {% for host in groups['lb'] %}
