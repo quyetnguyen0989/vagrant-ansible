@@ -77,3 +77,10 @@ ansible all -m shell -a "ifconfig"
  
 # play play book load-balancing.
 ansible-playbook e46-site.yml
+
+# test access web site on vm host
+http://localhost
+
+http://localhost/haproxy?stats
+
+
