@@ -1,8 +1,8 @@
 
-Loadblancing 
-Ansible with Vagrant
+#Loadblancing 
+#Ansible with Vagrant
 
-#1,
+#1, make home directory and clone code
 mkdir /home/vagrant/ 
 git clone https://github.com/quyetnguyen0989/vagrant-ansible
 
@@ -37,9 +37,9 @@ vagrant ssh mgmt
  
 ## Gen key ssh
 ssh-keyscan web1
-ssh-keyscan lb web1 web2 >> .ssh/known_hosts
-cat .ssh/known_hosts
-ansible all -m ping --ask-pass
+.ssh-keyscan lb web1 web2 >> .ssh/known_hosts
+.cat .ssh/known_hosts
+.ansible all -m ping --ask-pass
 ansible all -m ping
 ssh-keygen -t rsa -b 2048  
 ssh-keyscan web3 web4 web5 web6 >> .ssh/known_hosts
