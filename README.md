@@ -4,17 +4,17 @@ Ansible with Vagrant
 
 
 1,
-## mkdir /home/vagrant/ 
-## git clone https://github.com/quyetnguyen0989/vagrant-ansible
+mkdir /home/vagrant/ 
+git clone https://github.com/quyetnguyen0989/vagrant-ansible
 
 remembers & review : 
 2, files: 
 nano bootstrap-mgmt.sh
-# copy examples into /home/vagrant (from inside the mgmt node)
+copy examples into /home/vagrant (from inside the mgmt node)
 cp -a /vagrant/examples/* /home/vagrant
 chown -R vagrant:vagrant /home/vagrant
  
-# nano Vagrantfile
+nano Vagrantfile
 
 
 3, Let's building
