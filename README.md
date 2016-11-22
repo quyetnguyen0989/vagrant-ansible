@@ -19,6 +19,7 @@ nano Vagrantfile
 #3, Let's building
 
 vagrant up
+
 vagrant ssh mgmt
 
 # Ping check 
@@ -33,6 +34,7 @@ vagrant ssh mgmt
  
 # Try ssh(remember type no)
  ssh web1
+ 
  ansible web1 -m ping
  
 # Gen key ssh
