@@ -79,8 +79,10 @@ ansible all -m shell -a "ifconfig"
 ansible-playbook e46-site.yml
 # 
 # installed apache bench on my host machine
+
 sudo apt-get install apache2-utils
-[~]$ ab -n 10000 -c 25 http://localhost/
+
+ab -n 10000 -c 25 http://localhost/
 
 # test access web site on vm host
 http://localhost
