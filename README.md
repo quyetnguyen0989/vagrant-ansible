@@ -4,13 +4,19 @@
 
 #1, make home directory and clone code
 mkdir /home/vagrant/ 
+
 git clone https://github.com/quyetnguyen0989/vagrant-ansible
 
-remembers & review : 
+#remembers & review :
+
 #2, files: 
+
 nano bootstrap-mgmt.sh
+
 copy examples into /home/vagrant (from inside the mgmt node)
+
 cp -a /vagrant/examples/* /home/vagrant
+
 chown -R vagrant:vagrant /home/vagrant
  
 nano Vagrantfile
@@ -23,12 +29,19 @@ vagrant up
 vagrant ssh mgmt
 
 # Ping check 
+
  df -h
+ 
  ping web1
+ 
  ping web2
+ 
  ping lb
+ 
  ping web3
+ 
  ping web4
+ 
  ping web6
 
  
