@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
       lb_config.vm.box = "ubuntu/trusty64"
       lb_config.vm.hostname = "lb"
       lb_config.vm.network :private_network, ip: "10.0.15.11"
-      lb_config.vm.network "forwarded_port", guest: 80, host: 8080
+      lb_config.vm.network "forwarded_port", guest: 80, host: 80
       lb_config.vm.provider "virtualbox" do |vb|
         vb.memory = "256"
       end
