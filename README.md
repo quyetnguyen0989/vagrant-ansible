@@ -77,6 +77,10 @@ ansible all -m shell -a "ifconfig"
  
 # play play book load-balancing.
 ansible-playbook e46-site.yml
+# 
+# installed apache bench on my host machine
+sudo apt-get install apache2-utils
+[~]$ ab -n 10000 -c 25 http://localhost/
 
 # test access web site on vm host
 http://localhost
@@ -85,4 +89,5 @@ http://localhost/haproxy?stats
 
 # source 
 https://sysadmincasts.com/episodes/46-configuration-management-with-ansible-part-3-4
+
 
