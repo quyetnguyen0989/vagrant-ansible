@@ -36,17 +36,28 @@ vagrant ssh mgmt
  ansible web1 -m ping
  
 # Gen key ssh
-ssh-keyscan web1 #
+ssh-keyscan web1
+
 ssh-keyscan lb web1 web2 >> .ssh/known_hosts
+
 cat .ssh/known_hosts
+
 ansible all -m ping --ask-pass
+
 ansible all -m ping
+
 ssh-keygen -t rsa -b 2048  
+
 ssh-keyscan web3 web4 web5 web6 >> .ssh/known_hosts
+
 ansible-playbook e45-ssh-addkey.yml --ask-pass
+
 ansible all -m ping
+
 ansible web1 -m setup -a "filter=ansible_hostname"
+
 ansible web1 -m setup -a "filter=ansible_eth1"
+
 ansible all -m shell -a "ifconfig"
  
 # play play book load-balancing.
