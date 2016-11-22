@@ -21,7 +21,7 @@ nano Vagrantfile
 vagrant up
 vagrant ssh mgmt
 
-## Ping check 
+# Ping check 
  df -h
  ping web1
  ping web2
@@ -31,15 +31,15 @@ vagrant ssh mgmt
  ping web6
 
  
-## Try ssh(remember type no)
+# Try ssh(remember type no)
  ssh web1
  ansible web1 -m ping
  
-## Gen key ssh
-ssh-keyscan web1
-.ssh-keyscan lb web1 web2 >> .ssh/known_hosts
-.cat .ssh/known_hosts
-.ansible all -m ping --ask-pass
+# Gen key ssh
+ssh-keyscan web1 #
+ssh-keyscan lb web1 web2 >> .ssh/known_hosts
+cat .ssh/known_hosts
+ansible all -m ping --ask-pass
 ansible all -m ping
 ssh-keygen -t rsa -b 2048  
 ssh-keyscan web3 web4 web5 web6 >> .ssh/known_hosts
