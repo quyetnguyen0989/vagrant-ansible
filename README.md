@@ -83,4 +83,6 @@ http://localhost
 
 http://localhost/haproxy?stats
 
+# source 
+https://sysadmincasts.com/episodes/46-configuration-management-with-ansible-part-3-4
 
